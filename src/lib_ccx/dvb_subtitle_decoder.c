@@ -1633,7 +1633,7 @@ static int write_dvb_sub(struct lib_cc_decode *dec_ctx, struct cc_subtitle *sub)
 			continue;
 
 		int x_off = display->x_pos - x_pos;
-		int y_off = display->y_pos - y_pos;
+		int y_off = display->y_pos - y_pos + 1;
 		for (int y = 0; y < region->height; y++)
 		{
 			for (int x = 0; x < region->width; x++)
